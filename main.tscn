@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://ulkyqyvm0u1b"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_xcmsy"]
+[ext_resource type="PackedScene" uid="uid://c5b2330wjalsc" path="res://pipe.tscn" id="2_5gfm2"]
+[ext_resource type="Texture2D" uid="uid://bytqqtwe5uqii" path="res://sprites/background-day.png" id="2_vbawj"]
+[ext_resource type="PackedScene" uid="uid://cwypp01i78qri" path="res://player.tscn" id="3_cqofb"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_xcmsy")
+pipe = ExtResource("2_5gfm2")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 478.0
+offset_bottom = 719.0
+texture = ExtResource("2_vbawj")
+
+[node name="Player" parent="." instance=ExtResource("3_cqofb")]
+position = Vector2(0, 0)
+
+[node name="StartPosition" type="Marker2D" parent="."]
+position = Vector2(128, 384)
